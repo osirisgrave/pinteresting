@@ -10,6 +10,8 @@ $jumbotron-bg:                     white;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
 
 .center {
      text-align: center;
@@ -84,4 +86,8 @@ $jumbotron-bg:                     white;
 
 .jumbotron {
 	margin-top: 50px;
+}
+
+.container-top-margin {
+    margin-top: 26px;
 }

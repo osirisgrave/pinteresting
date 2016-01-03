@@ -9,7 +9,20 @@
 </head>
 <body>
 	<%= render 'layouts/header' %>
-	<div class="container">
+	
+<% if current_page?(root_url) %>
+
+  <div class="header-image">
+    <div class="text">
+        <h2 class="title">Slacker Radio Presents</h2>
+        <img class="logo" src="http://www.slacker.com/s=6.0.1290.5/images/redcoat/the-beatles-logo.png" alt="The Beatles Logo">
+        <p>The greatest band of all time is finally available for streaming...and Slacker wants to share them with you.</p>
+        <a class="feature-link" href="/thebeatles" data-bind="click: function(data){ $root.showStaticPage('thebeatles')}">Explore The Catalogue</a>
+    </div>
+  </div>
+<% end %>
+
+	<div class="container-top-margin">
 		<% flash.each do |name, msg| %>
      		<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<% end %>
