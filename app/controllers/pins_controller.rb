@@ -7,7 +7,7 @@ class PinsController < ApplicationController
   #Create = New, Create; Read = index, show; Update = Edit, Update; Destroy = Destroy
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order("created_at DESC")
   end
 
   def show
